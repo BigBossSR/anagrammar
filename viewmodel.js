@@ -13,13 +13,14 @@ var inputData = []; //comes from input - split into arr
 var Letter = function(char) {
     this.character = ko.observable(char);
     this.charCode = char.charCodeAt();
+    this.unmatched = true;
 };
 
 var viewModel = {
     self: this,
 
     letters: ko.observableArray(),
-    composition: ko.observableArray(),
+    composition: ko.observable(),
 
 
 //behaviors can use push and remove to mirror letters
@@ -48,22 +49,39 @@ var viewModel = {
     handleKeystroke: function(k) {
         var newCharCode = k.keyCode;
         if (newCharCode !== 32 || newCharCode !== 8 || newCharCode !== 46) {
-            k.preventDefault();
 
-            var letterBank = viewModel.letters();
+            viewModel.compareToBank();
 
-            for (var i = 0; i < letterBank.length; i++) {
-                if (letterBank[i].charCode === newCharCode) {
-                    console.log("I found it");
-                    viewModel.composition.push(letterBank[i].character());
-                    this.letters.remove(letterBank[i]);
-
-                    break;
-                }
-            }
         }
-        console.log(k);
-        console.log(viewModel.composition())
+
+
+    },
+
+    compareToBank: function() {
+        //var composition = util.getEl("new-term").value;
+        var letterBank = this.letters();
+        for (var i = 0; i < this.letters().length; i++) {
+            letterBank[i].unmatched = true;
+        }
+
+        var tempComposition = this.composition();
+        for (var i = 0; i < this.composition().length; i++) {
+            var temp = this.composition()[i].toUpperCase();
+            for (var j = 0; j < letterBank.length; j++) {
+                console.log("temp: "+temp+". array item: "+letterBank[j])
+                if (temp === letterBank[j].character() && letterBank[j].unmatched === true) {
+                    console.log("I found it!");
+                    letterBank[j].unmatched = false;
+                    break;
+                } else {
+                    var newString = viewModel.composition().replace(temp,'');
+                    viewModel.composition(newString);
+                }
+
+            }
+
+        }
+
 
     }
     

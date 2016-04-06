@@ -26,7 +26,7 @@
 
         populateLetterList: function(){
             viewModel.letters.removeAll();
-            viewModel.composition.removeAll();
+            viewModel.composition("");
             var entry = util.stripToLetters(util.getEl("original-term").value);
             viewModel.processInput(entry);
     

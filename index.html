@@ -15,12 +15,12 @@
         <div class="bank">
             <label for="letter-bank">Remaining Letters:</label>
             <div id="letter-bank" data-bind="foreach: letters">
-                <span data-bind="text: character"></span>
+                <span data-bind="text: character, visible: unmatched"></span>
             </div>
         </div>
         <div class="work-area">
             <label for="new-term">Compose Your Acronym Here</label>
-            <textarea id="new-term" onkeydown="viewModel.handleKeystroke(event)" data-bind="value: composition"></textarea>
+            <textarea id="new-term" onkeydown="viewModel.handleKeystroke(event)" data-bind="textInput: composition"></textarea>
         </div>
 
 
