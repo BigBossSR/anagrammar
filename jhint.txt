@@ -1,0 +1,1 @@
+[31m>> [39m0 files linted. Please check your ignored files.

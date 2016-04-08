@@ -9,6 +9,7 @@ function ViewModel () {
 
     self.letters = ko.observableArray();
     self.composition = ko.observable();
+    self.anagramStore = ko.observableArray();
 
 //behaviors can use push and remove to mirror letters
     self.processInput =  function(alphaNumString) {
@@ -66,14 +67,26 @@ function ViewModel () {
 
         var reduced = letterBank.reduce(function(prevChar, currentChar){
             if ( currentChar.character() === prevChar && currentChar.unmatched() ) {
-                return prevChar = currentChar;
+                return currentChar;
             } else {
-                return prevChar = prevChar;
+                return prevChar;
             }
         }, typed.toUpperCase() );
 
         return reduced;
     };
+
+    self.storeComposition = function(thing, e) {
+        var allMatched = viewModel.letters().every( function(l) { return !(l.unmatched())});
+        allMatched ? self.pushToStore() : console.log("nope");
+    },
+
+    self.pushToStore = function() {
+        var underArr = this.anagramStore();
+        underArr.push(util.getEl("new-term").value);
+        self.composition("");
+        this.anagramStore.valueHasMutated();
+    }
     
 }
 var viewModel = new ViewModel();

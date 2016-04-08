@@ -18,10 +18,22 @@
     margin-bottom: .4em;
 }
 
+.composition {
+    vertical-align: text-top;
+}
 #new-term {
     vertical-align: text-top;
 }
 
 #new-term, #original-term {
     width: 100%;
+}
+
+.save {
+    width: 100%;
+    text-align: center;
+    background: black;
+    color: white;
+    font-weight: bold;
+    padding: .2em;
 }

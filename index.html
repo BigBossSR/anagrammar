@@ -30,10 +30,14 @@
             </div>
             <div class="composition column">
                 <textarea id="new-term" onkeyup="viewModel.handleKeystroke(event)" data-bind="textInput: composition"></textarea>
+                <div class="btn save" data-bind="click: storeComposition">Save This Anagram</div>
             </div>
         </div>
-
+        <div class="row" data-bind="foreach: anagramStore">
+            <div data-bind="text: $data"></div>
+        </div>
     </div>
+
 
 </body>
 

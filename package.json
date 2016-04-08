@@ -1,0 +1,25 @@
+{
+  "name": "anagrammar",
+  "version": "0.0.1",
+  "description": "A tool for dynamically anagramming words",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigBossSR/anagrammar.git"
+  },
+  "author": "Scott A. M. Ross",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigBossSR/anagrammar/issues"
+  },
+  "homepage": "https://github.com/BigBossSR/anagrammar#readme"
+}
