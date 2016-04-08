@@ -8,21 +8,30 @@
 <body>
 
     <div class="container">
-        <div class="original">
-            <label for="original-term">Enter Your Starting Word(s)</label>
-            <input type="text" id="original-term" onchange="api.populateLetterList()" autofocus/>
-        </div>
-        <div class="bank">
-            <label for="letter-bank">Remaining Letters:</label>
-            <div id="letter-bank" data-bind="foreach: letters">
-                <span data-bind="text: character, visible: unmatched"></span>
+        <div class="row">
+            <div class="input column">
+                <div class="label" for="original-term">Enter Your Starting Word(s)</div>
+            </div>
+            <div class="bank column">
+                <div class="label" for="letter-bank">Remaining Letters:</div>
+            </div>
+            <div class="composition column">
+                <div class="label" for="new-term">Compose Your Anagram Here</div>
             </div>
         </div>
-        <div class="work-area">
-            <label for="new-term">Compose Your Anagram Here</label>
-            <textarea id="new-term" onkeyup="viewModel.handleKeystroke(event)" data-bind="textInput: composition"></textarea>
+        <div class="row">
+            <div class="input column">
+                <input type="text" id="original-term" onchange="api.populateLetterList()" autofocus/>
+            </div>
+            <div class="bank column">
+                <div id="letter-bank" data-bind="foreach: letters">
+                    <span data-bind="text: character, visible: unmatched"></span>
+                </div>
+            </div>
+            <div class="composition column">
+                <textarea id="new-term" onkeyup="viewModel.handleKeystroke(event)" data-bind="textInput: composition"></textarea>
+            </div>
         </div>
-
 
     </div>
 

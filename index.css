@@ -1,6 +1,27 @@
-.container div {
+.container {
+    padding: 4%;
+}
+
+.column {
     display: inline-block;
-    width: 33%;
+    width: 30%;
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 1%;
+}
+
+.label {
+    display: block;
+    vertical-align: text-top;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: .4em;
+}
+
+#new-term {
+    vertical-align: text-top;
+}
+
+#new-term, #original-term {
+    width: 100%;
 }

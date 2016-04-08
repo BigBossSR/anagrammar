@@ -1,15 +1,3 @@
-/**
- * Created by sross on 4/5/2016.
- */
-var inputData = []; //comes from input - split into arr
-//option: make a letter observable object,
-//split the string into new letter
-//-use ko.utils.arrayMap
-//could set an id, so never more letters than max id
-//what if it just checks if it's in there and steals it?
-//then on delete, pushes it back in...
-//use a computed to see if it's in the letter bank?
-
 var Letter = function(char) {
     this.character = ko.observable(char);
     this.charCode = char.charCodeAt();
