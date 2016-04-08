@@ -47,10 +47,11 @@ function ViewModel () {
 
     self.handleKeystroke =  function(k) {
         var newCharCode = k.keyCode;
-        var typed;
+        var typed = String.fromCharCode(newCharCode);
 
-        if (newCharCode !== 32 || newCharCode !== 8 || newCharCode !== 46) {
-            typed = String.fromCharCode(newCharCode);
+        var pattern = new RegExp("^[a-zA-Z0-9]+$");
+
+        if (pattern.test(typed)) {
             self.compareToBank(typed);
         }
     };
@@ -69,7 +70,7 @@ function ViewModel () {
                 return prevChar = prevChar;
             }
         }, typed);
-
+        console.log(reduced)
         typeof(reduced) === "object" ? reduced.unmatched(false) : console.log("not observable");
 
     };
