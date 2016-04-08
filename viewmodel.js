@@ -13,18 +13,17 @@ var inputData = []; //comes from input - split into arr
 var Letter = function(char) {
     this.character = ko.observable(char);
     this.charCode = char.charCodeAt();
-    this.unmatched = true;
+    this.unmatched = ko.observable(true);
 };
 
-var viewModel = {
-    self: this,
+function ViewModel () {
+    var self = this;
 
-    letters: ko.observableArray(),
-    composition: ko.observable(),
-
+    self.letters = ko.observableArray();
+    self.composition = ko.observable();
 
 //behaviors can use push and remove to mirror letters
-    processInput: function(alphaNumString) {
+    self.processInput =  function(alphaNumString) {
        
         
         var charArr = alphaNumString.split("");
@@ -38,54 +37,44 @@ var viewModel = {
             return letter;
         });*/
         this.lazyShuffle();
-    },
+    };
 
-    lazyShuffle: function () {
+    self.lazyShuffle =  function () {
         this.letters.sort(function(k) {
             return k.charCode;
         })
-    },
+    };
 
-    handleKeystroke: function(k) {
+    self.handleKeystroke =  function(k) {
         var newCharCode = k.keyCode;
+        var typed;
+
         if (newCharCode !== 32 || newCharCode !== 8 || newCharCode !== 46) {
-
-            viewModel.compareToBank();
-
+            typed = String.fromCharCode(newCharCode);
+            self.compareToBank(typed);
         }
+    };
 
+    self.compareToBank =  function(typed) {
+        var letterBank = self.letters();
+/*        letterBank.forEach(function(letter){
+            letter.unmatched = true;
+        });*/
 
-    },
-
-    compareToBank: function() {
-        //var composition = util.getEl("new-term").value;
-        var letterBank = this.letters();
-        for (var i = 0; i < this.letters().length; i++) {
-            letterBank[i].unmatched = true;
-        }
-
-        var tempComposition = this.composition();
-        for (var i = 0; i < this.composition().length; i++) {
-            var temp = this.composition()[i].toUpperCase();
-            for (var j = 0; j < letterBank.length; j++) {
-                console.log("temp: "+temp+". array item: "+letterBank[j])
-                if (temp === letterBank[j].character() && letterBank[j].unmatched === true) {
-                    console.log("I found it!");
-                    letterBank[j].unmatched = false;
-                    break;
-                } else {
-                    var newString = viewModel.composition().replace(temp,'');
-                    viewModel.composition(newString);
-                }
-
+        var reduced = letterBank.reduce(function(prevChar, currentChar){
+            console.log(currentChar, typed);
+            if ( currentChar.character() === prevChar && currentChar.unmatched() ) {
+                return prevChar = currentChar;
+            } else {
+                return prevChar = prevChar;
             }
+        }, typed);
 
-        }
+        typeof(reduced) === "object" ? reduced.unmatched(false) : console.log("not observable");
 
-
-    }
+    };
     
 }
-
+var viewModel = new ViewModel();
 ko.applyBindings(viewModel);
 
