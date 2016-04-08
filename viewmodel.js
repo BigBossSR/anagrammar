@@ -45,14 +45,21 @@ function ViewModel () {
         })
     };
 
-    self.handleKeystroke =  function(k) {
-        var newCharCode = k.keyCode;
+    self.handleKeystroke =  function(e) {
+        var newCharCode = e.keyCode;
         var typed = String.fromCharCode(newCharCode);
-
+        var compared;
         var pattern = new RegExp("^[a-zA-Z0-9]+$");
 
         if (pattern.test(typed)) {
-            self.compareToBank(typed);
+            compared = self.compareToBank(typed);
+            
+            if (typeof(compared) === "object") {
+                compared.unmatched(false);
+            } else {
+                console.log("not observable");
+                e.preventDefault();
+            }
         }
     };
 
@@ -71,7 +78,8 @@ function ViewModel () {
             }
         }, typed);
         console.log(reduced)
-        typeof(reduced) === "object" ? reduced.unmatched(false) : console.log("not observable");
+
+        return reduced;
 
     };
     
