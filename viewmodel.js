@@ -24,18 +24,13 @@ function ViewModel () {
 
 //behaviors can use push and remove to mirror letters
     self.processInput =  function(alphaNumString) {
-       
-        
         var charArr = alphaNumString.split("");
 
         for (var i = 0; i < alphaNumString.length; i++) {
             var letter = new Letter(alphaNumString[i]);
             this.letters.push(letter);
         }
-/*        viewModel.letters = ko.utils.arrayMap(charArr, function(char) {
-            var letter = new Letter(char);
-            return letter;
-        });*/
+
         this.lazyShuffle();
     };
 
@@ -46,41 +41,50 @@ function ViewModel () {
     };
 
     self.handleKeystroke =  function(e) {
-        var newCharCode = e.keyCode;
-        var typed = String.fromCharCode(newCharCode);
+        var composition = (util.getEl("new-term").value).split("");
+        var newComposition = "";
         var compared;
-        var pattern = new RegExp("^[a-zA-Z0-9]+$");
 
-        if (pattern.test(typed)) {
-            compared = self.compareToBank(typed);
-            
-            if (typeof(compared) === "object") {
-                compared.unmatched(false);
-            } else {
-                console.log("not observable");
-                e.preventDefault();
+        self.resetArray(self.letters());
+        composition.forEach( function (typed) {
+            if (self.isAlphaNum(typed)) {
+                compared = self.compareToBank(typed);
+                if (typeof(compared) === "object") {
+                    compared.unmatched(false);
+                } else {
+                    console.log("not observable");
+                    return;
+                }
             }
-        }
+            newComposition+=typed;
+        });
+
+        util.getEl("new-term").value = newComposition;
     };
+
+    self.resetArray = function(koArr) {
+        koArr.forEach(function(letter){
+             letter.unmatched(true);
+        });
+    },
+
+    self.isAlphaNum = function (typed) {
+        var pattern = new RegExp("^[a-zA-Z0-9]+$");
+        return pattern.test(typed);
+    },
 
     self.compareToBank =  function(typed) {
         var letterBank = self.letters();
-/*        letterBank.forEach(function(letter){
-            letter.unmatched = true;
-        });*/
 
         var reduced = letterBank.reduce(function(prevChar, currentChar){
-            console.log(currentChar, typed);
             if ( currentChar.character() === prevChar && currentChar.unmatched() ) {
                 return prevChar = currentChar;
             } else {
                 return prevChar = prevChar;
             }
-        }, typed);
-        console.log(reduced)
+        }, typed.toUpperCase() );
 
         return reduced;
-
     };
     
 }

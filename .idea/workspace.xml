@@ -4,6 +4,7 @@
     <list default="true" id="47104226-a32e-48a0-829d-519da1aea0d0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/viewmodel.js" afterPath="$PROJECT_DIR$/viewmodel.js" />
     </list>
     <ignored path="anagrammar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,33 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+            <state relative-caret-position="391">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#40#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="viewmodel.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="viewmodel.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/viewmodel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+            <state relative-caret-position="-70">
+              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -81,8 +70,8 @@
         <option value="$PROJECT_DIR$/node_modules/Gruntfile.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/viewmodel.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/viewmodel.js" />
       </list>
     </option>
   </component>
@@ -181,7 +170,7 @@
       <recent name="C:\Users\sross\WebstormProjects\anagrammar" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.viewmodel.js">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/anagrammar/index.html">
       <method />
     </configuration>
@@ -247,8 +236,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.viewmodel.js" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.viewmodel.js" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +261,7 @@
       <workItem from="1459875678735" duration="10188000" />
       <workItem from="1459910693887" duration="9976000" />
       <workItem from="1459970677623" duration="13121000" />
-      <workItem from="1460130409796" duration="5306000" />
+      <workItem from="1460130409796" duration="10534000" />
     </task>
     <task id="LOCAL-00001" summary="-m &quot;add readme file&quot;">
       <created>1460130592860</created>
@@ -302,11 +291,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460136363749</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="correct spelling error">
+      <created>1460136438086</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1460136438086</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43154000" />
+    <option name="totallyTimeSpent" value="48382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1608" y="-440" width="1616" height="1216" extended-state="6" />
@@ -321,7 +317,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26723325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18620038" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.268431" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -347,11 +343,12 @@
     <MESSAGE value="decompose comparison to a single-letter reduction" />
     <MESSAGE value="only compare alphanumeric keystrokes" />
     <MESSAGE value="don't allow unmatched characters in composition" />
-    <option name="LAST_COMMIT_MESSAGE" value="don't allow unmatched characters in composition" />
+    <MESSAGE value="correct spelling error" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct spelling error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -641,31 +638,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/viewmodel.js">
+    <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+        <state relative-caret-position="323">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/libs/knockout-3.4.0.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="292">
+          <caret line="98" column="470" selection-start-line="98" selection-start-column="470" selection-end-line="98" selection-end-column="470" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        <state relative-caret-position="391">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewmodel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
