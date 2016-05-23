@@ -37,3 +37,7 @@
     font-weight: bold;
     padding: .2em;
 }
+
+.table-container {
+    margin: 0 auto;
+}
