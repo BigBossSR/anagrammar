@@ -3,4 +3,4 @@ node_modules/
 npm-debug.log
 jshint.txt
 bower_components/
-.idea/
+.idea/workspace.xml
