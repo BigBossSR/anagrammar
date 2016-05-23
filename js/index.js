@@ -46,19 +46,8 @@
 
 
 //handsontable
-/*var rawData = {
-    originals: ["Sample Term", "Another", "Something Else"],
-    anagrams: {
-        1: ["arm temples", "metal sperm", "melts a perm"],
-        2: ["heat ron"],
-        3: ["Me English Toes", "Steel sing home"]
-    }
-},*/
 var rawData = {
-    "Sample Term": ["arm temples", "metal perms", "melts a perm"],
-    "Another": ["heat ron"],
-    "Something Else": ["Me English Toes", "Steel sing home"]
-
+    "Sample Term": ["arm temples", "metal perms", "lamp meters"]
 },
     container = util.getEl("hot-target"),
     hot1,
